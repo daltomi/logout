@@ -1,0 +1,114 @@
+object frm_logout: Tfrm_logout
+  Left = 718
+  Height = 163
+  Top = 328
+  Width = 175
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'logout'
+  ClientHeight = 163
+  ClientWidth = 175
+  DesignTimePPI = 84
+  DockSite = True
+  FormStyle = fsSystemStayOnTop
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poDesktopCenter
+  ShowInTaskBar = stNever
+  LCLVersion = '2.0.6.0'
+  object ActionsGroup: TRadioGroup
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = btnOK
+    Left = 4
+    Height = 124
+    Top = 4
+    Width = 167
+    Anchors = [akTop, akLeft, akRight]
+    AutoFill = True
+    BorderSpacing.Around = 4
+    Caption = 'Acciones'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 107
+    ClientWidth = 165
+    ItemIndex = 0
+    Items.Strings = (
+      'Apagar'
+      'Suspender'
+      'Reiniciar'
+      'Hibernar'
+      'Sesión...'
+    )
+    OnClick = OnActionsClick
+    ParentFont = False
+    TabOrder = 0
+    object cbSession: TComboBox
+      Left = 6
+      Height = 22
+      Top = 85
+      Width = 153
+      Enabled = False
+      ItemHeight = 0
+      Items.Strings = (
+        'Fluxbox'
+        'i3'
+        'JWM'
+        'Openbox'
+        'PekWM'
+        'IceWM'
+        'LXDE'
+        'Herbstluftwm'
+      )
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 4
+    end
+  end
+  object btnOK: TBitBtn
+    AnchorSideLeft.Control = Owner
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 4
+    Height = 25
+    Top = 134
+    Width = 77
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Around = 4
+    Caption = '&Aceptar'
+    GlyphShowMode = gsmSystem
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = OnClickButton
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btnCancel: TBitBtn
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 91
+    Height = 25
+    Top = 134
+    Width = 80
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 4
+    Cancel = True
+    Caption = '&Cancelar'
+    Default = True
+    GlyphShowMode = gsmSystem
+    Kind = bkCancel
+    ModalResult = 2
+    OnClick = OnClickButton
+    ParentFont = False
+    TabOrder = 2
+  end
+end
