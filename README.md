@@ -1,9 +1,9 @@
 # logout
 
 
-<img src="https://git.disroot.org/daltomi/logout/raw/branch/master/scr00.png"/>
+<img src="https://github.com/daltomi/logout/raw/master/scr00.png"/>
 
-<img src="https://git.disroot.org/daltomi/logout/raw/branch/master/scr01.png"/>
+<img src="https://github.com/daltomi/logout/raw/master/scr01.png"/>
 
 
 ## Build:
